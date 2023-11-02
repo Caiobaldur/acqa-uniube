@@ -14,12 +14,14 @@ body {
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(21,0,98,1) 100%);
   color: #fff;
   font-family: var(--font-primary);
+  height: 100vh;
 }
 
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2.5rem 20rem;
 }
 
 .navigation a img{
@@ -34,10 +36,64 @@ body {
 
 .navigation ul {
   display: flex;
-  gap: 2rem;
+  text-transform: uppercase;
+  gap: 3rem;
   list-style: none;
 }
 
-.navigation ul li a{
+.navigation ul li a {
   text-decoration: none;
+  color: #c0c0c0;
+  font-size: 1.8rem;
+  transition: 0.5s; 
+  position: relative; 
+}
+
+.navigation ul li a::after { 
+  content: ''; 
+  display: block; 
+  width: 0; 
+  border-bottom: 2px solid #fff; 
+  position: absolute; 
+  bottom: -3px; 
+  left: 0; 
+  transition: width 0.5s; 
+}
+
+.navigation ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation ul li a:hover::after {
+  width: 100%; 
+}
+
+main {
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "images text";
+}
+
+.images {
+  position:relative
+}
+
+.inner {
+  grid-area: images;
+  width: 80rem;
+  position: relative;
+  object-fit: cover;
+}
+
+.me {
+  inset: 0;
+  transform: translateX(120px);
+  position: absolute;
+  
+}
+
+.content h1 {
+  grid-area: text;
 }
