@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-primary: 'Roboto', sans-serif;
+}
+
+body {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(21,0,98,1) 100%);
+  color: #fff;
+  font-family: var(--font-primary);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation a img{
+  width: 10rem;
+  transition: 1s;
+}
+
+.navigation a img:hover{
+  filter: brightness(1.5);
+  transition: 1s;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navigation ul li a{
+  text-decoration: none;
+}
