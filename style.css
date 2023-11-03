@@ -6,12 +6,17 @@
 
 :root {
   font-size: 62.5%;
-  --font-primary: 'Roboto', sans-serif;
+  --font-primary: "Roboto", sans-serif;
 }
 
 body {
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(21,0,98,1) 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(21, 0, 98, 1) 100%
+    );
+  backdrop-filter: blur(250px);
   color: #fff;
   font-family: var(--font-primary);
   height: 100vh;
@@ -19,88 +24,142 @@ body {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  padding: 2.5rem 20rem;
+  padding: 2.5rem 0;
 }
 
-.navigation a img{
+.navigation a img {
   width: 10rem;
-  transition: 1s;
-}
-
-.navigation a img:hover{
-  filter: brightness(1.5);
-  transition: 1s;
 }
 
 .navigation ul {
   display: flex;
   text-transform: uppercase;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   list-style: none;
 }
 
 .navigation ul li a {
   text-decoration: none;
   color: #c0c0c0;
-  font-size: 1.8rem;
-  transition: 0.5s; 
-  position: relative; 
-}
-
-.navigation ul li a::after { 
-  content: ''; 
-  display: block; 
-  width: 0; 
-  border-bottom: 2px solid #fff; 
-  position: absolute; 
-  bottom: -3px; 
-  left: 0; 
-  transition: width 0.5s; 
-}
-
-.navigation ul li a:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-.navigation ul li a:hover::after {
-  width: 100%; 
+  font-size: 1rem;
 }
 
 main {
   padding-top: 6rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  grid-template-areas: "images text";
+  gap: 2.5rem;
 }
 
-
-
-
-
-.content {
-  grid-area: images;
-  
+.content img{
+  width: 40rem;
 }
 
 h1 {
-  grid-area: text;
-  font-size: 7rem;
-  padding: 0 5rem;
-  
+  font-size: 5rem;
+  text-align: center;
 }
 
 footer {
   text-align: center;
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px 0;
   background-color: #333;
-  color: #fff; 
-  
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 20rem;
+  }
+
+  .navigation a img {
+    width: 10rem;
+    transition: 1s;
+  }
+
+  .navigation a img:hover {
+    filter: brightness(1.5);
+    transition: 1s;
+  }
+
+  .navigation ul {
+    display: flex;
+    
+    text-transform: uppercase;
+    gap: 3rem;
+    list-style: none;
+  }
+
+  .navigation ul li a {
+    text-decoration: none;
+    color: #c0c0c0;
+    font-size: 1.8rem;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  .navigation ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.5s;
+  }
+
+  .navigation ul li a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .navigation ul li a:hover::after {
+    width: 100%;
+  }
+
+  main {
+    padding-top: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: "images text";
+  }
+
+  .content {
+    grid-area: images;
+  }
+
+  .content img{
+    width: 80rem;
+  }
+
+  h1 {
+    grid-area: text;
+    font-size: 7rem;
+    padding: 0 5rem;
+  }
+
+  footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+  }
 }
