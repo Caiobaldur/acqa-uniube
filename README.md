@@ -31,5 +31,5 @@ Esse projeto contempla a aplicação dos conhecimentos básicos de HTML & CSS co
 8. Página com o nome fale_conosco.html com um formulário de contato com pelo menos as seguintes informações:
 - Um textarea.
   - Um campo com a utilização de botões de rádio.
-    - Uma caixa se seleção.
+    - Uma caixa de seleção.
       - Botão para envio do formulário.
