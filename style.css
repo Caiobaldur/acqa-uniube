@@ -19,7 +19,7 @@ body {
   backdrop-filter: blur(250px);
   color: #fff;
   font-family: var(--font-primary);
-  height: 100vh;
+  height: 100%;
 }
 
 .navigation {
@@ -75,7 +75,7 @@ footer {
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .navigation {
     display: flex;
     flex-direction: row;
@@ -144,12 +144,12 @@ footer {
   }
 
   .content img{
-    width: 80rem;
+    width: 70rem;
   }
 
   h1 {
     grid-area: text;
-    font-size: 7rem;
+    font-size: 6rem;
     padding: 0 5rem;
   }
 

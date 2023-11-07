@@ -19,7 +19,7 @@ body {
   backdrop-filter: blur(250px);
   color: #fff;
   font-family: var(--font-primary);
-  height: 100vh;
+  height: 100%;
 }
 
 .navigation {
@@ -48,6 +48,103 @@ body {
   font-size: 1rem;
 }
 
+/********** Conteúdo **********/
+
+main {
+  padding: 5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  
+}
+
+/********** Dicas (OL) **********/
+.types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.types h2 {
+  font-size: 1.8rem;
+  align-self: flex-start;
+  color: rgb(71, 102, 240);
+}
+
+.types ol li {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.types img {
+  width: 30rem;
+}
+
+/********** Tabela **********/
+
+.container h1 {
+  color: rgb(71, 102, 240);
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+.content-table,
+th,
+td {
+  border: solid 1px rgb(0, 0, 0);
+
+}
+
+.content-table {
+  
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #000;
+}
+
+.container table tr th {
+  height: 5rem;
+  font-size: 1.6rem;
+  letter-spacing: .25rem;
+  text-align: left;
+  padding: 0 5rem;
+}
+
+.container table tr td {
+  height: 5rem;
+  font-size: 1.6rem;
+  letter-spacing: .25rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.container table tr td a {
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #c0c0c0;
+  font-size: 1rem;
+  font-size: 2rem;
+  letter-spacing: .25rem;
+  text-align: center;
+  background-color: #235dfc;
+  color: #fff;
+  transition: .5s ;
+}
+
+.container table tr td a:hover {
+  transition: .5s ;
+  background-color: #4775f3;
+  color: #cacaca;
+}
+
+thead {
+  background-color: #235dfc;
+  color: #fff;
+}
+
 footer {
   text-align: center;
   position: absolute;
@@ -58,7 +155,7 @@ footer {
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .navigation {
     display: flex;
     flex-direction: row;
@@ -93,8 +190,6 @@ footer {
     position: relative;
   }
 
-  
-  
   .navigation ul li a::after {
     content: "";
     display: block;
@@ -110,10 +205,12 @@ footer {
     text-decoration: none;
     color: #fff;
   }
-  
+
   .navigation ul li a:hover::after {
     width: 100%;
   }
+
+  /********** Conteúdo **********/
 
   main {
     padding: 5rem 25rem;
@@ -121,26 +218,101 @@ footer {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     grid-template-areas: "types container";
-    
   }
 
-  .types{
-    
+  /********** Dicas (OL) **********/
+  .types {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-area: types;
   }
 
-  .types img {
-    width: 40rem;
+  .types h2 {
+    font-size: 1.8rem;
+    align-self: flex-start;
+    color: rgb(71, 102, 240);
   }
 
+  .types ol li {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  .types img {
+    width: 30rem;
+  }
+
+  /********** Tabela **********/
   .container {
     grid-area: container;
   }
 
-  .content-table{
-    border-collapse: collapse;
+  .container h1 {
+    color: rgb(71, 102, 240);
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
   }
+
+  .content-table,
+  th,
+  td {
+    border: solid 1px rgb(0, 0, 0);
   
+  }
+
+  .content-table {
+    
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #000;
+  }
+
+  .container table tr th {
+    height: 5rem;
+    font-size: 1.6rem;
+    letter-spacing: .25rem;
+    text-align: left;
+    padding: 0 5rem;
+  }
+
+  .container table tr td {
+    height: 5rem;
+    font-size: 1.6rem;
+    letter-spacing: .25rem;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .container table tr td a {
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #c0c0c0;
+    font-size: 1rem;
+    font-size: 2rem;
+    letter-spacing: .25rem;
+    text-align: center;
+    background-color: #235dfc;
+    color: #fff;
+    transition: .5s ;
+  }
+
+  .container table tr td a:hover {
+    transition: .5s ;
+    background-color: #4775f3;
+    color: #cacaca;
+  }
+
+  thead {
+    background-color: #235dfc;
+    color: #fff;
+  }
+
+
+
+  /* footer */
   footer {
     text-align: center;
     position: absolute;
