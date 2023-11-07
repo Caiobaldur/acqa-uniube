@@ -55,7 +55,6 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
-  
 }
 
 /********** Dicas (OL) **********/
@@ -64,7 +63,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .types h2 {
@@ -94,11 +92,9 @@ main {
 th,
 td {
   border: solid 1px rgb(0, 0, 0);
-
 }
 
 .content-table {
-  
   border-collapse: collapse;
   background-color: #fff;
   color: #000;
@@ -107,7 +103,7 @@ td {
 .container table tr th {
   height: 5rem;
   font-size: 1.6rem;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   text-align: left;
   padding: 0 5rem;
 }
@@ -115,7 +111,7 @@ td {
 .container table tr td {
   height: 5rem;
   font-size: 1.6rem;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   text-align: center;
   padding: 0 2rem;
 }
@@ -127,15 +123,15 @@ td {
   color: #c0c0c0;
   font-size: 1rem;
   font-size: 2rem;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   text-align: center;
   background-color: #235dfc;
   color: #fff;
-  transition: .5s ;
+  transition: 0.5s;
 }
 
 .container table tr td a:hover {
-  transition: .5s ;
+  transition: 0.5s;
   background-color: #4775f3;
   color: #cacaca;
 }
@@ -259,11 +255,9 @@ footer {
   th,
   td {
     border: solid 1px rgb(0, 0, 0);
-  
   }
 
   .content-table {
-    
     border-collapse: collapse;
     background-color: #fff;
     color: #000;
@@ -272,7 +266,7 @@ footer {
   .container table tr th {
     height: 5rem;
     font-size: 1.6rem;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-align: left;
     padding: 0 5rem;
   }
@@ -280,7 +274,7 @@ footer {
   .container table tr td {
     height: 5rem;
     font-size: 1.6rem;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-align: center;
     padding: 0 2rem;
   }
@@ -292,15 +286,15 @@ footer {
     color: #c0c0c0;
     font-size: 1rem;
     font-size: 2rem;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-align: center;
     background-color: #235dfc;
     color: #fff;
-    transition: .5s ;
+    transition: 0.5s;
   }
 
   .container table tr td a:hover {
-    transition: .5s ;
+    transition: 0.5s;
     background-color: #4775f3;
     color: #cacaca;
   }
@@ -309,8 +303,6 @@ footer {
     background-color: #235dfc;
     color: #fff;
   }
-
-
 
   /* footer */
   footer {
